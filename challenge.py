@@ -77,8 +77,6 @@ def crop(input, height, width):
             list.append(im.crop(box))
     return list
 
-
-
 list = crop("challenge.png", 50, 50)
 cuadradito_list = []
 for x in list:
@@ -90,18 +88,8 @@ for x in list:
     if (cuadradito.isUpperCornerLeft()):
         cul = cuadradito
     cuadradito_list.append(cuadradito)
-'''
-    if (cuadradito.isUpperCornerRight()):
-        x.show()
 
-    if (cuadradito.isLowerCornerRight()):
-        x.show()
-
-    if (cuadradito.isLowerCornerLeft()):
-        x.show()
-'''
 qr = qrtools.QR()
-
 
 def show(l):
     new_im = Image.new('RGB', (980, 980))
@@ -170,8 +158,6 @@ def completeNextRow(cuadraditos_left, nw):
             completeNextRow(left, nwnwl)
 
     return
-
-
 
 def completeRow(l, cuadraditos_left):
 
